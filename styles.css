@@ -10,24 +10,24 @@ html{
 
 @font-face {
     font-family: SF-Bold;
-    src: url('../assets/fonts/SF-Bold.ttf');
+    src: url('./assets/fonts/SF-Bold.ttf');
 }
 
 @font-face {
     font-family: SF-Light;
-    src: url('../assets/fonts/SF-Light.otf');
+    src: url('./assets/fonts/SF-Light.otf');
 }
 
 @font-face {
     font-family: SF-Semibold;
-    src: url('../assets/fonts/SF-Semibold.otf');
+    src: url('./assets/fonts/SF-Semibold.otf');
 }
 
 .background{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url('../assets/background.png') no-repeat center center fixed;
+    background: url('./assets/background.png') no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -106,7 +106,9 @@ html{
 }
 
 .arrow_up{
-    width: 25px;
+    width: 20px;
+    height: 18px;
+    margin-right: 10px;
 }
 
 .text1{
@@ -114,6 +116,7 @@ html{
     font-size: 1.7rem;
     color: #098DD6;
 }
+
 
 .disclaimer__container{
     display: flex;
@@ -146,6 +149,7 @@ html{
 
 input{
     border:none;
+    background-color: transparent;
 }
 
 .input::placeholder{
@@ -385,26 +389,6 @@ input[type="checkbox"] {
     color: #098DD6
 }
 
-.services__container{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    width: 80%;
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-
-.service__container{
-    border-radius: 17.5px;
-    width: 100%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    padding: 5px 10px;
-    align-items: center;
-    margin-top: 20px;
-}
 
 .dark-blue{
     background-color: #098DD6;
@@ -421,7 +405,7 @@ input[type="checkbox"] {
 }
 
 .chirurgie_title__container{
-   margin-top: 20px;   
+    margin-top: 20px;   
 }
 
 .telephones__container{
@@ -444,6 +428,7 @@ input[type="checkbox"] {
     border: 1px solid #098DD6;
     border-radius: 6px;
     margin-top: 15px;
+    margin-bottom: 60px;
 }
 
 .two_telephones_cards__container{
@@ -656,4 +641,67 @@ h6{
     color: #098DD6;
     font-size: 2.2rem;
     font-family: SF-Light;
+}
+
+
+.collapsible-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.collapsible {
+    border-radius: 17.5px;
+    width: 100%;
+    min-height: 30px;
+    /* padding: 5px 10px; */
+    margin-top: 20px;
+}
+
+.collapsible-header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.collapsible-header span {
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.collapsible-content {
+    display: none;
+    padding: 20px 30px;
+    width: 100%;
+    border-radius: 17.5px;
+    border: 1px solid #098DD6;
+    background-color: white;
+}
+
+.collapsible.active .collapsible-header i {
+    transform: rotate(180deg);
+}
+
+.collapsible.active .collapsible-content {
+    display: block;
+}
+
+li{
+    font-family: SF-Light;
+    color: #098DD6;
+    font-size: 1.8rem;
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.notifications__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
